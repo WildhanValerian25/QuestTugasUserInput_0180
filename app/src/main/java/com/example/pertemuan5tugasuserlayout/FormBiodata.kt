@@ -28,6 +28,7 @@ import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -182,16 +183,21 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    OutlinedTextField(
-                        value = tglLahir,
-                        onValueChange = { tglLahir = it },
-                        label = { Text("Tanggal Lahir", fontSize = 11.sp) },
-                        trailingIcon = {
-                            Icon(Icons.Default.DateRange, contentDescription = "Callender")
-                        },
-                        shape = RoundedCornerShape(12.dp),
-                        modifier = Modifier.weight(1f)
-                    )
+                    Box(modifier = Modifier.weight(1f)) {
+                        OutlinedTextField(
+                            value = tglLahir,
+                            onValueChange = { },
+                            label = { Text("Tanggal Lahir", fontSize = 11.sp) },
+                            readOnly = true,
+                            trailingIcon = {
+                                IconButton(onClick = { showDatePicker = true }) {
+                                    Icon(Icons.Default.DateRange, contentDescription = "Calendar")
+                                }
+                            },
+                            shape = RoundedCornerShape(12.dp),
+                            modifier = Modifier.fillMaxWidth()
+                        )
+
                     OutlinedTextField(
                         value = experience,
                         onValueChange = { experience = it },
@@ -199,6 +205,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                         trailingIcon = {
                             Icon(Icons.Default.ArrowDropDown, contentDescription = "Dropdown")
                         },
+
                         shape = RoundedCornerShape(12.dp),
                         modifier = Modifier.weight(1f)
                     )
