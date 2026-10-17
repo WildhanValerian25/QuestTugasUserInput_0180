@@ -69,6 +69,14 @@ fun FormBiodata(modifier: Modifier = Modifier) {
     val datePickerState = rememberDatePickerState()
     var selectedDate by remember { mutableStateOf("") }
 
+    val isFormValid = namaDepan.isNotBlank() &&
+            namaBelakang.isNotBlank() &&
+            email.isNotBlank() &&
+            tglLahir.isNotBlank() &&
+            experience.isNotBlank() &&
+            (isAndroidDevChecked || isUiUxChecked || isWebDevChecked)
+
+
     if (showDatePicker) {
         DatePickerDialog(
             onDismissRequest = { showDatePicker = false },
@@ -259,16 +267,25 @@ fun FormBiodata(modifier: Modifier = Modifier) {
 
                 Spacer(modifier = Modifier.height(10.dp))
 
-                // Tombol Submit / Proceed (Berdiri sendiri di dalam Column)
+                // Tombol Submit / Proceed Dinamis
                 Button(
                     onClick = { /* Aksi submit */ },
+                    enabled = isFormValid,
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(44.dp),
                     shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFDCDCDC))
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0xFF6B46C1),         // Warna saat aktif
+                        disabledContainerColor = Color(0xFFDCDCDC), // Warna saat belum lengkap (pake 'd' di akhir disabled)
+                        contentColor = Color.White,                  // Warna teks saat aktif
+                        disabledContentColor = Color.White          // Warna teks saat belum lengkap
+                    )
                 ) {
-                    Text(text = "Proceed", color = Color.White)
+                    Text(
+                        text = "Proceed",
+                        fontWeight = FontWeight.Bold
+                    )
                 }
 
             } //
