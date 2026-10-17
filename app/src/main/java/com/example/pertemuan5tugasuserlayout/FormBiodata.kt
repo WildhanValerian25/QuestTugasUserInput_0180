@@ -211,7 +211,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     shape = RoundedCornerShape(12.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFDCDCDC))
                 ){
-
+                    Text(text = "Proceed", color = Color.White)
                 }
 
 
