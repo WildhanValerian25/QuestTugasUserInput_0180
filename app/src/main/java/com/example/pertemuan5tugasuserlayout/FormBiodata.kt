@@ -90,6 +90,11 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFF6B46C1)
                 )
+                Text(
+                    text = "Silahkan isi formulir biodata di bawah ini",
+                    fontSize = 11.sp,
+                    color = Color.Gray
+                )
 
 
 
