@@ -17,6 +17,8 @@ import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
@@ -185,6 +187,22 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     )
                     Text(text = "Web ", fontSize = 11.sp)
                 }
+                Spacer(modifier =  Modifier.height(10.dp))
+
+                // Tombol Submit / Proceed
+                Button(
+                    onClick = { /* Aksi submit */},
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(44.dp),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFDCDCDC))
+                ){
+
+                }
+
+
+
 
                 }
 
