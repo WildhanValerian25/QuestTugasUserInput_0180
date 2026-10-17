@@ -17,6 +17,7 @@ import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -148,6 +149,16 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                         label = { Text("Tanggal Lahir", fontSize = 11.sp) },
                         trailingIcon = {
                             Icon(Icons.Default.DateRange, contentDescription = "Callender")
+                        },
+                        shape = RoundedCornerShape(12.dp),
+                        modifier = Modifier.weight(1f)
+                    )
+                    OutlinedTextField(
+                        value = experience,
+                        onValueChange = { experience = it },
+                        label = { Text("Experience", fontSize = 11.sp) },
+                        trailingIcon = {
+                            Icon(Icons.Default.ArrowDropDown, contentDescription = "Dropdown")
                         },
                         shape = RoundedCornerShape(12.dp),
                         modifier = Modifier.weight(1f)
