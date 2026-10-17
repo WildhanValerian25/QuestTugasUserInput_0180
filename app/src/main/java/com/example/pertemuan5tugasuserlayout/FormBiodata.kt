@@ -12,3 +12,4 @@ fun FormBiodata(modifier: Modifier = Modifier) {
     var namaDepan by remember { mutableStateOf("") }
     var namaBelakang by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
+    var tglLahir by remember { mutableStateOf("") }
