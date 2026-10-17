@@ -55,7 +55,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
     var isWebDevChecked by remember { mutableStateOf(false) }
 
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color(0xFF1E1B2E)),
 
@@ -72,7 +72,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
             Image(
                 painter = painterResource(id = R.drawable.wallpaper_ultraman),
                 contentDescription = "wallpaper Ultraman",
-                modifier = Modifier.size(80.dp)
+                modifier = Modifier.size(250.dp)
             )
         }
 
