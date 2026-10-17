@@ -20,28 +20,21 @@ class MainActivity : ComponentActivity() {
         setContent {
             Pertemuan5TugasUserLayoutTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    FormBiodata(
                         modifier = Modifier.padding(innerPadding)
+
                     )
                 }
             }
         }
     }
 }
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun FormBiodataPreview() {
     Pertemuan5TugasUserLayoutTheme {
-        Greeting("Android")
+        FormBiodata()
     }
 }
+
+
