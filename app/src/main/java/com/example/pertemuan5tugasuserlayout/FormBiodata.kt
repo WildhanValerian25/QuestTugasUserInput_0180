@@ -6,7 +6,12 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CheckboxDefaults.colors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ComposableTarget
 import androidx.compose.runtime.getValue
@@ -53,12 +58,21 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 contentDescription = "wallpaper Ultraman",
                 modifier = Modifier.size(80.dp)
             )
-
-
-
         }
 
+        // Card 2 putih form utama
+        Card(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(top = 170.dp),
+            shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White)
+        ) {
 
+        }
     }
 }
+
+
+
 
