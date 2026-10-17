@@ -157,6 +157,13 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 fontSize = 13.sp,
                 modifier = Modifier.fillMaxWidth()
             )
+            // Checkbox Skill
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+            }
         }
     }
 }
