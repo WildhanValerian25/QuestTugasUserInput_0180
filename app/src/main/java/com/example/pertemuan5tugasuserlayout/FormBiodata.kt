@@ -171,12 +171,22 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     )
                     Text(text = "Android", fontSize = 11.sp)
                 }
+                Row(verticalAlignment  = Alignment.CenterVertically) {
+                    Checkbox(
+                        checked = isUiUxChecked,
+                        onCheckedChange = { isUiUxChecked = it },
+                    )
+                    Text(text = "UI/UX", fontSize = 11.sp)
+                }
+
+                }
+
 
 
             }
         }
     }
-}
+
 
 
 
