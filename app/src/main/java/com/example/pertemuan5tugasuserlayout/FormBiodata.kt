@@ -150,6 +150,13 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 }
                 Spacer(modifier = Modifier.height(4.dp))
             }
+            // Label Skill
+            Text(
+                text = "Pilih Skill Anda :",
+                fontWeight = FontWeight.Bold,
+                fontSize = 13.sp,
+                modifier = Modifier.fillMaxWidth()
+            )
         }
     }
 }
