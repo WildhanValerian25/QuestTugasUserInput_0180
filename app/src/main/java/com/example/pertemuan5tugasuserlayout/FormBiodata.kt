@@ -33,7 +33,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF2A0845)),
+            .background(Color(0xFF1E1B2E)),
 
         ) {
         // 1. Header Banner Atas
