@@ -1,5 +1,6 @@
 package com.example.pertemuan5tugasuserlayout
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -44,6 +45,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -52,6 +54,7 @@ import androidx.compose.ui.unit.sp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormBiodata(modifier: Modifier = Modifier) {
+    val context = LocalContext.current // 👈 Tambahkan ini untuk Toast
     //  State untuk input field
     var namaDepan by remember { mutableStateOf("") }
     var namaBelakang by remember { mutableStateOf("") }
@@ -269,7 +272,13 @@ fun FormBiodata(modifier: Modifier = Modifier) {
 
                 // Tombol Submit / Proceed Dinamis
                 Button(
-                    onClick = { /* Aksi submit */ },
+                    onClick = {
+                        Toast.makeText(
+                            context,
+                            "Data $namaDepan $namaBelakang berhasil dikirim",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    },
                     enabled = isFormValid,
                     modifier = Modifier
                         .fillMaxWidth()
