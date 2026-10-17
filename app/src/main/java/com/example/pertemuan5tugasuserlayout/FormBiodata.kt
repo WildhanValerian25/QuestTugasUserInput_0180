@@ -19,6 +19,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults.colors
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
@@ -163,6 +164,15 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
+                Row(verticalAlignment  = Alignment.CenterVertically) {
+                    Checkbox(
+                        checked = isAndroidDevChecked,
+                        onCheckedChange = { isAndroidDevChecked = it },
+                    )
+                    Text(text = "Android", fontSize = 11.sp)
+                }
+
+
             }
         }
     }
