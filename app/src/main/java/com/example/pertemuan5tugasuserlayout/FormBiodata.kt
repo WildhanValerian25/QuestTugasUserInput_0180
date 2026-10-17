@@ -108,14 +108,21 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     OutlinedTextField(
                         value = namaDepan,
                         onValueChange = { namaDepan = it },
-                        label = { Text("Nama Depan") },
+                        label = { Text("Nama Depan", fontSize = 11.sp) },
                         shape = RoundedCornerShape(12.dp),
                         modifier = Modifier.weight(1f)
 
                     )
+                    OutlinedTextField(
+                        value = namaBelakang,
+                        onValueChange = { namaBelakang = it },
+                        label = { Text("Nama Belakang", fontSize = 11.sp) },
+                        shape = RoundedCornerShape(12.dp),
+                        modifier = Modifier.weight(1f)
+                    )
                 }
 
-                )
+
 
 
             }
