@@ -85,7 +85,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     .padding(20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(10.dp)
-            ){
+            ) {
                 // Judul
                 Text(
                     text = "Formulir Biodata",
@@ -129,11 +129,14 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     shape = RoundedCornerShape(12.dp),
                     modifier = Modifier.fillMaxWidth()
                 )
+                // Input Tgl Lahir & Experience
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
 
 
-
-
-
+                }
             }
         }
     }
