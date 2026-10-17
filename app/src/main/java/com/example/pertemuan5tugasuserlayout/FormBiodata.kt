@@ -120,7 +120,6 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                         label = { Text("Nama Depan", fontSize = 11.sp) },
                         shape = RoundedCornerShape(12.dp),
                         modifier = Modifier.weight(1f)
-
                     )
                     OutlinedTextField(
                         value = namaBelakang,
@@ -130,6 +129,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                         modifier = Modifier.weight(1f)
                     )
                 }
+
                 // Input Email
                 OutlinedTextField(
                     value = email,
@@ -138,6 +138,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     shape = RoundedCornerShape(12.dp),
                     modifier = Modifier.fillMaxWidth()
                 )
+
                 // Input Tgl Lahir & Experience
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -164,45 +165,49 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                         modifier = Modifier.weight(1f)
                     )
                 }
+
                 Spacer(modifier = Modifier.height(4.dp))
-            }
-            // Label Skill
-            Text(
-                text = "Pilih Skill Anda :",
-                fontWeight = FontWeight.Bold,
-                fontSize = 13.sp,
-                modifier = Modifier.fillMaxWidth()
-            )
-            // Checkbox Skill
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Checkbox(
-                        checked = isAndroidDevChecked,
-                        onCheckedChange = { isAndroidDevChecked = it },
-                    )
-                    Text(text = "Android", fontSize = 11.sp)
+
+                // Label Skill
+                Text(
+                    text = "Pilih Skill Anda :",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 13.sp,
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                // Checkbox Skill
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Checkbox(
+                            checked = isAndroidDevChecked,
+                            onCheckedChange = { isAndroidDevChecked = it },
+                        )
+                        Text(text = "Android", fontSize = 11.sp)
+                    }
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Checkbox(
+                            checked = isUiUxChecked,
+                            onCheckedChange = { isUiUxChecked = it },
+                        )
+                        Text(text = "UI/UX", fontSize = 11.sp)
+                    }
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Checkbox(
+                            checked = isWebDevChecked,
+                            onCheckedChange = { isWebDevChecked = it },
+                        )
+                        Text(text = "Web ", fontSize = 11.sp)
+                    }
                 }
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Checkbox(
-                        checked = isUiUxChecked,
-                        onCheckedChange = { isUiUxChecked = it },
-                    )
-                    Text(text = "UI/UX", fontSize = 11.sp)
-                }
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Checkbox(
-                        checked = isWebDevChecked,
-                        onCheckedChange = { isWebDevChecked = it },
-                    )
-                    Text(text = "Web ", fontSize = 11.sp)
-                }
+
                 Spacer(modifier = Modifier.height(10.dp))
 
-                // Tombol Submit / Proceed
+                // Tombol Submit / Proceed (Berdiri sendiri di dalam Column)
                 Button(
                     onClick = { /* Aksi submit */ },
                     modifier = Modifier
@@ -213,7 +218,8 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 ) {
                     Text(text = "Proceed", color = Color.White)
                 }
-            }
+
+            } //
         }
     }
 }
