@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -95,6 +96,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     fontSize = 11.sp,
                     color = Color.Gray
                 )
+                Spacer(modifier = Modifier.height(6.dp))
 
 
 
