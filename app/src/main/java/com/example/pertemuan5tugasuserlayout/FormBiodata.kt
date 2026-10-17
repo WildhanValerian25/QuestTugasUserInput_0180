@@ -14,3 +14,6 @@ fun FormBiodata(modifier: Modifier = Modifier) {
     var email by remember { mutableStateOf("") }
     var tglLahir by remember { mutableStateOf("") }
     var experience by remember { mutableStateOf("") }
+
+    // state untuk checkbox skill
+    var isAndroidDevChecked by remember { mutableStateOf(false) }
