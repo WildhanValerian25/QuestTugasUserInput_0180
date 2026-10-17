@@ -9,4 +9,6 @@ import androidx.compose.ui.Modifier
 @Composable
 fun FormBiodata(modifier: Modifier = Modifier) {
     //  State untuk input field
-    var namaDepan by remember { mutableStateOf("") }}
+    var namaDepan by remember { mutableStateOf("") }
+    var namaBelakang by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
