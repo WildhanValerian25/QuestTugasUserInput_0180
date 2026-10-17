@@ -147,11 +147,8 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                         shape = RoundedCornerShape(12.dp),
                         modifier = Modifier.weight(1f)
                     )
-
-
-
-
                 }
+                Spacer(modifier = Modifier.height(4.dp))
             }
         }
     }
