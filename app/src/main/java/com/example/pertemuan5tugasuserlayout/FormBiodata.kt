@@ -179,52 +179,55 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Row(verticalAlignment  = Alignment.CenterVertically) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
                     Checkbox(
                         checked = isAndroidDevChecked,
                         onCheckedChange = { isAndroidDevChecked = it },
                     )
                     Text(text = "Android", fontSize = 11.sp)
                 }
-                Row(verticalAlignment  = Alignment.CenterVertically) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
                     Checkbox(
                         checked = isUiUxChecked,
                         onCheckedChange = { isUiUxChecked = it },
                     )
                     Text(text = "UI/UX", fontSize = 11.sp)
                 }
-                Row(verticalAlignment  = Alignment.CenterVertically) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
                     Checkbox(
                         checked = isWebDevChecked,
                         onCheckedChange = { isWebDevChecked = it },
                     )
                     Text(text = "Web ", fontSize = 11.sp)
                 }
-                Spacer(modifier =  Modifier.height(10.dp))
+                Spacer(modifier = Modifier.height(10.dp))
 
                 // Tombol Submit / Proceed
                 Button(
-                    onClick = { /* Aksi submit */},
+                    onClick = { /* Aksi submit */ },
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(44.dp),
                     shape = RoundedCornerShape(12.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFDCDCDC))
-                ){
+                ) {
                     Text(text = "Proceed", color = Color.White)
                 }
-
-
-
-
-                }
-
-                }
-
-
-
             }
         }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
