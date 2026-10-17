@@ -18,3 +18,4 @@ fun FormBiodata(modifier: Modifier = Modifier) {
     // state untuk checkbox skill
     var isAndroidDevChecked by remember { mutableStateOf(false) }
     var isUiUxChecked by remember { mutableStateOf(false) }
+    var isWebDevChecked by remember { mutableStateOf(false) }
