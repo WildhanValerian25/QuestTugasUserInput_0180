@@ -178,6 +178,15 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     )
                     Text(text = "UI/UX", fontSize = 11.sp)
                 }
+                Row(verticalAlignment  = Alignment.CenterVertically) {
+                    Checkbox(
+                        checked = isWebDevChecked,
+                        onCheckedChange = { isWebDevChecked = it },
+                    )
+                    Text(text = "Web ", fontSize = 11.sp)
+                }
+
+                }
 
                 }
 
@@ -185,7 +194,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
 
             }
         }
-    }
+
 
 
 
