@@ -56,6 +56,11 @@ fun FormBiodata(modifier: Modifier = Modifier) {
     var isUiUxChecked by remember { mutableStateOf(false) }
     var isWebDevChecked by remember { mutableStateOf(false) }
 
+    // State untuk pop up kalender
+    var showDatePicker by remember { mutableStateOf(false) }
+    var selectedDate by remember { mutableStateOf("") }
+
+
     Box(
         modifier = modifier
             .fillMaxSize()
